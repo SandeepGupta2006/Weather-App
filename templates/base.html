@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wethr - Know The Weather</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='weatherWoBG.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="theme-{{icon | default('')}}">
+    <main>
+        <h1 class="title"><a href="{{ url_for('main') }}">Wethr</a></h1>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 • Designed & Developed by <a href="https://sandeepgupta.onrender.com/" target="_blank">
+                <strong>Sandeep Gupta</strong></a>
+        </p>
+        <hr>
+        <p>Powered by <a href="https://openweathermap.org/" target="_blank">
+                <strong>OpenWeatherMap</strong></a></p>
+    </footer>
+</body>
+
+</html>

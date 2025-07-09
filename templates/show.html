@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="showDiv">
+    <h3>{{data.city}}<sub>{{data.country}}</sub></h3>
+    <h3>{{data.icon}}</h3>
+    <h3>{{data.desc|title}}</h3>
+    <h3>{{data.temp}} &degC</h3>
+    <h4><span>Feels Like</span> <span>{{data.feels}} &degC</span></h4>
+    <hr>
+    <h4><span>Pressure</span> <span>{{data.pressure}}hPa</span></h4>
+    <hr>
+    <h4><span>Humidity</span> <span>{{data.humidity}}%</span></h4>
+    <hr>
+    <h4><span>Wind</span> <span>{{data.wind_direction}} {{data.wind_speed}} m/s</span></h4>
+    <hr>
+    <h4><span>Sunrise</span> <span>{{data.sunrise}}</span></h4>
+    <hr>
+    <h4><span>Sunset</span> <span>{{data.sunset}}</span></h4>
+
+    <a href="{{ url_for('main') }}" class="back-button">← Back</a>
+</div>
+{% endblock content %}
