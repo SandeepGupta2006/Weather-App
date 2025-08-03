@@ -28,7 +28,7 @@ To run this Flask-based Weather App locally:
 ```bash
 # 1. Clone the repository
 git clone https://github.com/SandeepGupta2006/Weather-App.git
-cd weather-app-dynamic-theme
+cd Weather-App
 
 # 2. (Optional) Create a virtual environment
 python -m venv venv
